@@ -1,0 +1,232 @@
+.menu-btn {
+    position: absolute;
+    z-index: 3;
+    right: 35px;
+    top: 35px;
+    cursor: pointer;
+    transition: all 0.5s ease-out; }
+    .menu-btn .btn-line {
+      width: 28px;
+      height: 3px;
+      margin: 0 0 5px 0;
+      background: #fff;
+      transition: all 0.5s ease-out; }
+    .menu-btn.close {
+      transform: rotate(180deg); }
+      .menu-btn.close .btn-line:nth-child(1) {
+        transform: rotate(135deg) translate(0, -5px);
+        background-color: #eece1a; }
+      .menu-btn.close .btn-line:nth-child(2) {
+        transform: rotate(45deg) translate(0, -6px);
+        background-color: #eece1a; }
+      .menu-btn.close .btn-line:nth-child(3) {
+        opacity: 0; }
+  
+  .menu {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    visibility: hidden; }
+    .menu .menu-nav, .menu .menu-branding {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 50%;
+      align-items: center;
+      float: left;
+      height: 100vh;
+      justify-content: center;
+      overflow: hidden;
+      list-style-type: none; }
+    .menu .menu-nav {
+      background: #373737;
+      margin: 0;
+      padding: 0;
+      transform: translate3d(0, -100%, 0);
+      transition: all 0.5s ease-out; }
+      .menu .menu-nav.show {
+        transform: translate3d(0, 0, 0); }
+      .menu .menu-nav .nav-item {
+        transform: translate3d(800px, 0, 0);
+        transition: all 0.5s ease-out; }
+        .menu .menu-nav .nav-item.show {
+          transform: translate3d(0, 0, 0); }
+        .menu .menu-nav .nav-item:nth-child(1) {
+          transition-delay: 0.1s; }
+        .menu .menu-nav .nav-item:nth-child(2) {
+          transition-delay: 0.2s; }
+        .menu .menu-nav .nav-item:nth-child(3) {
+          transition-delay: 0.3s; }
+        .menu .menu-nav .nav-item:nth-child(4) {
+          transition-delay: 0.4s; }
+    .menu .menu-branding {
+      background: rgba(68, 68, 68, 0.9);
+      margin: 0;
+      padding: 0;
+      transform: translate3d(0, 100%, 0);
+      transition: all 0.5s ease-out; }
+      .menu .menu-branding .square {
+        height: 1000px;
+        width: 1000px;
+        background: url("project3.jpg");
+        border: 1px solid #eece1a; }
+      .menu .menu-branding.show {
+        transform: translate3d(0, 0, 0); }
+    .menu.show {
+      visibility: visible; }
+    .menu .nav-link {
+      font-size: 20px;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+      position: relative;
+      padding: 1rem 0;
+      text-transform: uppercase;
+      transition: all 0.5s ease-out; }
+      .menu .nav-link.current {
+        color: #eece1a; }
+      .menu .nav-link:hover {
+        color: #eece1a; }
+  
+  * {
+    box-sizing: border-box; }
+   
+    body {
+    background: #444;
+    color: white;
+    height: 100%;
+    margin: 0px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5; }
+    body#bg-img {
+      background-image: url(bc.jpg);
+      background-attachment: fixed;
+      background-size: cover; }
+      body#bg-img .overlay {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgba(68, 68, 68, 0.9); }
+  
+  h1, h2, h3 {
+    margin: 0;
+    font-weight: 400; }
+    h1.lg-heading, h2.lg-heading, h3.lg-heading {
+      font-size: 6rem; }
+    h1.sm-heading, h2.sm-heading, h3.sm-heading {
+      margin-bottom: 2rem;
+      padding: 0.2rem 1rem;
+      background: rgba(73, 73, 73, 0.5); }
+  
+  a {
+    color: #fff;
+    text-decoration: none; }
+  
+  header {
+    position: fixed;
+    z-index: 2;
+    width: 100%; }
+  
+  .text-secondary {
+    color: #eece1a; }
+  
+  main {
+    padding: 4rem;
+    min-height: calc(100vh - 30px); }
+    main .icons {
+      margin-top: 1rem; }
+      main .icons a {
+        padding: 0.4rem; }
+        main .icons a:hover {
+          color: #eece1a;
+          transition: all 0.5s ease-out; }
+    main#home h1 {
+      margin-top: 20vh; }
+  
+  #main-footer {
+    background: black;
+    width: 100%;
+    text-align: center;
+    height: 30px; }
+  
+  .about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+    grid-template-columns: 1fr 1fr 1fr; }
+  
+  .bio-image {
+    grid-area: bioimage;
+    border-radius: 50%;
+    border: #eece1a 3px solid;
+    margin: auto; }
+  
+  .bio {
+    grid-area: bio;
+    font-size: 1.2em; }
+  
+  .job-1 {
+    grid-area: job1; }
+  
+  .job-2 {
+    grid-area: job2; }
+  
+  .job-3 {
+    grid-area: job3; }
+  
+  .job {
+    background: #515151;
+    padding: 10px;
+    border-bottom: #eece1a 3px solid; }
+  
+ 
+  .btn, .btn-light, .btn-dark {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem; }
+    .btn:hover, .btn-light:hover, .btn-dark:hover {
+      background-color: #eece1a; }
+  
+  .btn-light {
+    background-color: #848484;
+    color: #333; }
+  
+  .btn-dark {
+    background-color: #040404; }
+  
+  @media screen and (min-width: 1171px) {
+    .projects {
+      grid-template-columns: repeat(4, 1fr); } }
+  
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    .projects {
+      grid-template-columns: repeat(4, 1fr); } }
+  
+  @media screen and (max-width: 768px) {
+    main {
+      align-items: center;
+      text-align: center; }
+      main .lg-heading {
+        line-height: 1;
+        margin-bottom: 1rem; }
+    .menu .menu-nav, .menu .menu-branding {
+      width: 100%;
+      height: 50vh; }
+    .menu .nav-link {
+      font-size: 0.8em;
+      font-weight: bold; }
+    .menu .menu-branding .portrait {
+      transform: scale(0.7); }
+    .about-info {
+      grid-template-areas: 'bioimage' 'bio' 'bio' 'job1' 'job2' 'job3';
+      grid-template-columns: 1fr; } }
+  
+  @media screen and (max-width: 500px) {
+    main#home h1 {
+      margin-top: 10vh; }
+    .projects {
+      grid-template-columns: repeat(2, 1fr); } }
